@@ -1,0 +1,12 @@
+<app-navbar (openLogin)="showLoginModal()"></app-navbar>
+
+<router-outlet></router-outlet>
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>
+<app-footr></app-footr>

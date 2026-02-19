@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-3 mb-4" *ngFor="let product of products$ | async">
+      <div class="card h-100 shadow-sm product-card">
+        <img 
+          [src]="product.images[0]" 
+          class="card-img-top p-3" 
+          height="200" 
+          style="object-fit: cover;"
+          alt="product image"
+        >
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title">
+            {{ product.title | slice:0:40 }}
+          </h6>
+          <p class="text-muted small flex-grow-1">
+            {{ product.description | slice:0:60 }}
+          </p>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <h5 class="text-primary mb-0">
+              ${{ product.price }}
+            </h5>
+            <div *ngIf="!quantities[product.id]">
+              <button class="btn btn-sm btn-dark" (click)="openAddModal(product)">Add to Cart</button>
+            </div>
+
+            <div *ngIf="quantities[product.id]" class="d-flex align-items-center gap-2">
+              <button class="btn btn-sm btn-outline-dark" (click)="decrease(product.id)"> -</button>
+              <span class="fw-bold">{{ quantities[product.id] }}</span>
+              <button class="btn btn-sm btn-dark" (click)="increase(product.id)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add to Cart</h5>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body" *ngIf="selectedProduct">
+        <div class="d-flex gap-3 align-items-center mb-3">
+          <img 
+            [src]="selectedProduct.images[0]" 
+            alt="selected product image" 
+            style="width:80px; height:80px; object-fit:cover; border-radius:6px;"
+          >
+          <div>
+            <h6 class="mb-1">{{ selectedProduct.title }}</h6>
+            <p class="mb-0 text-muted small">${{ selectedProduct.price }}</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2 mt-3">
+          <button class="btn btn-sm btn-outline-dark" (click)="decreaseLocal()"> - </button>
+          <span class="fw-bold">{{ localQuantity }}</span>
+          <button class="btn btn-sm btn-dark" (click)="increaseLocal()">+</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Cancel </button>
+        <button type="button" class="btn btn-primary" (click)="confirmAdd()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+.product-card {
+  transition: 0.3s ease;
+  border-radius: 12px;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.card-img-top {
+  object-fit: contain;
+}
+.modal-title{
+  font-weight: bold;
+  margin-left: 40%;
+}
+.modal.fade{
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+}
+.d-flexe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+.modal-body .d-flexe{
+  font-size: 50px;
+}
+.modal-body img{
+  width: 200px;
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+.mb-1{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.mb-0{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}

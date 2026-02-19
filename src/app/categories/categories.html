@@ -1,0 +1,28 @@
+<div class="container mt-5">
+
+  <div class="row g-4">
+
+    <div class="col-md-3 col-sm-6"
+         *ngFor="let category of categories$ | async">
+
+      <div class="card h-100 shadow-sm text-center category-card"
+           (click)="goToCategory(category.id)">
+
+        <img [src]="category.image"
+             class="card-img-top p-3"
+             height="200"
+             style="object-fit:contain">
+
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ category.name }}
+          </h5>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

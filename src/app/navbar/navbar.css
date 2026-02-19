@@ -1,0 +1,26 @@
+.navbar {
+  padding: 15px 0;
+}
+.navbar-brand{
+    margin-left: -60px;
+}
+.nav-item{
+    cursor: pointer;
+    color: #fff;
+    margin-left: 40px;
+}
+.nav-item :hover{
+    transform: scale(1.1);
+    transition: 0.3s;   
+}
+.navbar-brand {
+  font-size: 20px;
+}
+
+.nav-link.active {
+  color: #ffc107 !important;
+  font-weight: bold;
+}
+.form-control{
+  width: 250px;
+}
