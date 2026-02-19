@@ -20,11 +20,11 @@
               </button>
             </div>
             <div *ngIf="quantities[product.id]" class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-dark" (click)="decrease(product.id)">
+              <button class="btn btn-sm btn-outline-dark" (click)="decrement(product.id)">
                 -
               </button>
               <span class="fw-bold">{{ quantities[product.id] }}</span>
-              <button class="btn btn-sm btn-dark" (click)="increase(product.id)">
+              <button class="btn btn-sm btn-dark" (click)="increment(product.id)">
                 +
               </button>
             </div>
