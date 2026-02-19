@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Override Font Awesome font paths for production */
+@font-face {
+  font-family: 'Font Awesome 7 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/ahmed-store/assets/fonts/fa-regular-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 7 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/ahmed-store/assets/fonts/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 7 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/ahmed-store/assets/fonts/fa-brands-400.woff2') format('woff2');
+}
