@@ -22,11 +22,6 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*.woff2",
-                "input": "node_modules/@fortawesome/fontawesome-free/webfonts",
-                "output": "/assets/fonts"
               }
             ],
             "styles": [
