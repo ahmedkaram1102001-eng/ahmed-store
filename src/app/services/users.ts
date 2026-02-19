@@ -6,9 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductService {
-  getAllCategories() {
-    throw new Error('Method not implemented.');
-  }
   private apiUrl = 'https://api.escuelajs.co/api/v1/products';
 
   constructor(private http: HttpClient) {}

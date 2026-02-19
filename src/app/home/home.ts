@@ -12,12 +12,6 @@ import { CartService } from '../shared/cart.service';
   styleUrl: './home.css',
 })
 export class Home {
-increase(arg0: any) {
-throw new Error('Method not implemented.');
-}
-decrease(arg0: any) {
-throw new Error('Method not implemented.');
-}
   private productService = inject(ProductService);
   private searchService = inject(SearchService);
   private cartService = inject(CartService);

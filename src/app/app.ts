@@ -11,8 +11,5 @@ import { Footr } from './footr/footr';
   styleUrl: './app.css'
 })
 export class App {
-showLoginModal() {
-throw new Error('Method not implemented.');
-}
   protected readonly title = signal('ahmed');
 }

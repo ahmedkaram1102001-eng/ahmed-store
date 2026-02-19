@@ -13,12 +13,6 @@ import { CartService } from '../shared/cart.service';
   templateUrl: './products.html',
 })
 export class Products implements OnInit {
-increase(arg0: any) {
-throw new Error('Method not implemented.');
-}
-decrease(arg0: any) {
-throw new Error('Method not implemented.');
-} 
   private productService = inject(ProductService);
   private searchService = inject(SearchService);
   private cartService = inject(CartService);
